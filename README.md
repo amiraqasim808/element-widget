@@ -31,33 +31,33 @@ A responsive and interactive widget built with **Next.js (App Router)**, **TypeS
 
 src/
 ├── app/
-│ ├── globals.css # Tailwind global styles
-│ ├── layout.tsx # Root layout
-│ └── page.tsx # Main page with selection display
+│   ├── globals.css               # Tailwind global styles
+│   ├── layout.tsx                 # Root layout
+│   └── page.tsx                   # Main page with selection display
 │
 ├── components/
-│ └── dialog/
-│ ├── DialogFooter.tsx # Save/Cancel buttons
-│ ├── DialogHeader.tsx # Dialog title & close button
-│ ├── DialogSearchControls.tsx # Search input + filter select
-│ ├── ElementDialog.tsx # Dialog wrapper containing all selection logic
-│ ├── ElementItem.tsx # Individual element with checkbox
-│ ├── ElementList.tsx # Scrollable list of elements
-│ ├── SelectedElementsPanel.tsx # Summary of selected items inside dialog
-│ ├── SelectedList.tsx # List of selected items on main page
-│ └── SelectFilter.tsx # Filter dropdown component
+│   └── dialog/
+│       ├── DialogFooter.tsx       # Save/Cancel buttons
+│       ├── DialogHeader.tsx       # Dialog title & close button
+│       ├── DialogSearchControls.tsx # Search input + filter select
+│       ├── ElementDialog.tsx      # Dialog wrapper containing all selection logic
+│       ├── ElementItem.tsx        # Individual element with checkbox
+│       ├── ElementList.tsx        # Scrollable list of elements
+│       ├── SelectedElementsPanel.tsx # Summary of selected items inside dialog
+│       ├── SelectedList.tsx       # List of selected items on main page
+│       └── SelectFilter.tsx       # Filter dropdown component
 │
 ├── data/
-│ └── elements.ts # Generates initial 300 elements
+│   └── elements.ts                # Generates initial 300 elements
 │
 ├── store/
-│ └── useElementStore.ts # Zustand store (selected & tempSelected states)
+│   └── useElementStore.ts         # Zustand store (selected & tempSelected states)
 │
 ├── types/
-│ └── select.ts.ts # Type definitions for selected items
+│   └── select.ts.ts                # Type definitions for selected items
 │
 └── utils/
-└── array.ts # Utility functions for array handling
+    └── array.ts                    # Utility functions for array handling
 
 bash
 Copy
