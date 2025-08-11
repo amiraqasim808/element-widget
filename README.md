@@ -1,118 +1,86 @@
-# 🌟 Element Widget
+# element-widget
 
-A **mobile-responsive**, interactive widget built with **Next.js (App Router)**, **TypeScript**, **Zustand**, and **Tailwind CSS** that allows users to select **up to three elements** from a list of 300 test items.
+![Node Version](https://img.shields.io/badge/node-v18.18.2-green)
+![License](https://img.shields.io/badge/license-UNLICENSED-blue)
+![Updated](https://img.shields.io/badge/last_updated-2025-08-11-orange)
 
----
+> A mobile-responsive, interactive widget built with Next.js (App Router), TypeScript, Zustand, and Tailwind CSS that allows users to select up to three elements from a list of 300 test items.
 
-## 📋 Features
 
-- **Initial Data** — 300 test elements (`Element 1` → `Element 300`)
-- **Selection Limit** — maximum of **3 items** at a time
-- **Main Page** — displays currently selected items + "Change my choice" button
-- **Dialog Popup**:
-  - 📜 **Scrollable list** of all elements
-  - 🔍 **Live search** with substring matching
-  - 🎯 **Number filter** (`> 10`, `> 50`, `> 100`)
-  - Search & filter **work together**
-  - ✅ Pre-checked boxes for already selected items
-  - 🗂 Summary section with **X** to remove items
-  - 🚫 Limit enforcement — when 3 items selected, others are disabled
-- **Save** — updates selection on main page
-- **Cancel** — discards changes
-- **Persistent storage** — selections remain after reload
 
----
+## 🔧 Frameworks / Tools Detected
+- React
+- Next.js
+- TypeScript
 
-## 🛠 Tech Stack
+## ⚙️ Config Files
+- .gitignore
+- tsconfig.json
 
-- **Next.js** (App Router)
-- **TypeScript**
-- **Zustand** (state management with `persist` middleware)
-- **Tailwind CSS** (custom responsive styling)
-- **No UI libraries** — fully custom components
+## 📦 Dependencies
+- generata
+- next
+- react
+- react-dom
+- zustand
 
----
+## 🧪 Dev Dependencies
+- @eslint/eslintrc
+- @tailwindcss/postcss
+- @types/node
+- @types/react
+- @types/react-dom
+- autoprefixer
+- eslint
+- eslint-config-next
+- postcss
+- tailwindcss
+- typescript
 
-## 📂 Project Structure
+## 📁 Folder Structure
+```
+- eslint.config.mjs
+- next-env.d.ts
+- next.config.ts
+- package-lock.json
+- package.json
+- postcss.config.mjs
+- README.md
+- src/
+  - app/
+    - globals.css
+    - layout.tsx
+    - page.tsx
+  - components/
+    - dialog/
+      - DialogFooter.tsx
+      - DialogHeader.tsx
+      - DialogSearchControls.tsx
+      - ElementDialog.tsx
+      - ElementItem.tsx
+      - ElementList.tsx
+      - SelectedElementsPanel.tsx
+      - SelectedList.tsx
+      - SelectFilter.tsx
+  - data/
+    - elements.ts
+  - store/
+    - useElementStore.ts
+  - types/
+    - select.ts.ts
+  - utils/
+    - array.ts
+- tsconfig.json
+```
 
-src/app/
-globals.css → Tailwind global styles
-layout.tsx → Root layout
-page.tsx → Main page with selection display
+## 📜 Scripts
+- `dev`: next dev → Start the app in development mode
+- `build`: next build → Build the app for production
+- `start`: next start → Start the production server
+- `lint`: next lint → Lint the codebase
 
-src/components/dialog/
-DialogFooter.tsx → Save / Cancel buttons
-DialogHeader.tsx → Title & close button
-DialogSearchControls.tsx → Search input + filter select
-ElementDialog.tsx → Dialog wrapper with selection logic
-ElementItem.tsx → Individual element with checkbox
-ElementList.tsx → Scrollable list of elements
-SelectedElementsPanel.tsx→ Selected items summary inside dialog
-SelectedList.tsx → Selected items on main page
-SelectFilter.tsx → Filter dropdown
+## 👤 Author
+- amira
 
-src/data/
-elements.ts → Generates initial 300 elements
-
-src/store/
-useElementStore.ts → Zustand store (selected & tempSelected states)
-
-src/types/
-select.ts.ts → Type definitions
-
-src/utils/
-array.ts → Array utility functions
-
-yaml
-Copy
-Edit
-
----
-
-## 🚀 Getting Started
-
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/amiraqasim808/element-widget.git
-cd element-widget
-2️⃣ Install dependencies
-bash
-Copy
-Edit
-npm install
-# or
-yarn install
-3️⃣ Run the development server
-bash
-Copy
-Edit
-npm run dev
-# or
-yarn dev
-Then open http://localhost:3000 in your browser.
-
-🧪 How It Works
-Main page shows up to 3 selected items + "Change my choice" button.
-
-Clicking opens the selection dialog.
-
-Use search and/or filter to refine the list.
-
-Check or uncheck items — summary updates instantly.
-
-Save → commits changes to main page.
-Cancel → discards changes.
-
-📱 Responsive Design
-Mobile, tablet, and desktop layouts
-
-Tailwind responsive utilities for layout, spacing, and typography
-
-Dialog adapts for small screens with scrollable content
-
-📊 Performance Notes
-Zustand ensures minimal, targeted state updates
-
-Shallow comparison prevents unnecessary re-renders
-
-Partial persist stores only committed selections — temp selections are ephemeral
+## 📝 License
+- UNLICENSED
